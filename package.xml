@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+    <name>Solwin_Social</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>By this module you can increase your social promotion in social media networks like:&amp;#xD;&#xD;
+Facebook, Twitter</summary>
+    <description>This extension allows Magento users to automatically update their Social Partners with sales information.</description>
+    <notes>This extension will provide you to connect with the social sites like twitter &amp;amp;amp;amp; facebook. Also you can replace the particuler media block with your own cms static block.</notes>
+    <authors><author><name>Sanjay Dabhoya</name><user>solwin</user><email>stdabhoya@yahoo.com</email></author></authors>
+    <date>2015-07-29</date>
+    <time>12:18:38</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Solwin_Social.xml" hash="01e4e3dfc937631bb3b247b58b4e03c6"/></dir></target><target name="magecommunity"><dir name="Solwin"><dir name="Social"><dir name="Block"><file name="Facebook.php" hash="c3c4fd405cc3449ca671494252be533d"/></dir><dir name="classes"><file name="OAuth.php" hash="69df2ea473a160534e22403904eb3dd3"/><file name="twitteroauth.php" hash="f4ef19372740e99e09da4855464c7c2f"/></dir><dir name="controllers"><file name="IndexController.php" hash="eb23c18c740ef61dab366dda9f32b75a"/></dir><dir name="etc"><file name="adminhtml.xml" hash="d878f06b7ff51d42f34c2458c85e174b"/><file name="config.xml" hash="13981ec4e18dc980a7062bb1bad177e5"/><file name="system.xml" hash="53feae21c30e2cc2e957d2208ed4af19"/></dir><dir name="Helper"><file name="Data.php" hash="f0dad771e266498c6fcb7fc014b23bc7"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="template"><dir name="social"><file name="facebook.phtml" hash="a65fa2cda4fe6ce5bee29e47bc20fe6f"/><file name="twitter.phtml" hash="90d175c064363fce34b4f1eea8d35bd0"/></dir></dir><dir name="layout"><file name="social.xml" hash="1517a6c4d6c3e9c8757651f068adc7af"/></dir></dir></dir></dir></target><target name="mageweb"><dir name="."><file name="gettweets.php" hash="d277ffef71604b67b3a4642e613ea54b"/></dir></target><target name="mageskin"><dir name="frontend"><dir name="default"><dir name="default"><dir name="js"><file name="script.js" hash="814f4e5851659a85813afba3bf11266d"/><file name="facebook.js" hash="bb113c16f6f4b4100fce113b5eb0a52a"/><file name="jquery-1.10.2.min.js" hash="841dc30647f93349b7d8ef61deebe411"/><file name="noconflict.js" hash="e2060c4e5e5955c824723b13a212d3ec"/></dir><dir name="images"><file name="social_twitter_icon.png" hash="d1d918517a3303d92d708dcba312fa30"/></dir><dir name="css"><file name="social-twitter.css" hash="ba2d5a1e4698f85b42fdda97baa531b2"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

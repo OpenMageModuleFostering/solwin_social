@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <solwinsocials translate="label" module="social">
+            <label>Solwin</label>
+            <sort_order>300</sort_order>
+        </solwinsocials>
+    </tabs>
+    <sections>
+        <socialsettings  translate="label" module="social">                    
+            <label>Social Media Settings</label>
+            <tab>solwinsocials</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>300</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>            
+            <groups>
+                <facebook translate="label"> 
+                    <label>Facebook Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment>To call in .phtml file
+                        echo $this->getLayout()->createBlock('core/template')->setTemplate('social/facebook.phtml')->toHtml()
+                    </comment>
+                    <fields>
+                        <facebookenable translate="label">
+                            <label>Enable Facebook</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </facebookenable>
+                        <facebookid translate="label">
+                            <label>Facebook Page URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry validate-url</validate>
+                            <comment>
+                                e.g. https://www.facebook.com/[facebookid]
+                            </comment>
+                            <depends>
+                                <facebookenable>1</facebookenable>
+                            </depends>
+                        </facebookid>
+                        <facebookleft translate="label">
+                            <label>Display in Left sidebar? </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <facebookenable>1</facebookenable>
+                            </depends>
+                        </facebookleft>
+                        <facebookright translate="label">
+                            <label>Display in Right sidebar? </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <facebookenable>1</facebookenable>
+                            </depends>
+                        </facebookright>
+                        <iframewidth>
+                            <label>Iframe Width</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>The pixel width of the embed (Min. 180 to Max. 500)</comment>
+                            <depends>
+                                <facebookenable>1</facebookenable>
+                            </depends>
+                        </iframewidth>
+                        <iframeheight>
+                            <label>Iframe Height</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>.
+                            <comment> The pixel height of the embed (Min. 70)</comment>
+                            <depends>
+                                <facebookenable>1</facebookenable>
+                            </depends>
+                        </iframeheight>
+                        <hidecover>
+                            <label>Hide Cover Photo?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Hide Cover Photo in header.</comment>
+                            <depends>
+                                <facebookenable>1</facebookenable>
+                            </depends>
+                        </hidecover>
+                        <facepile>
+                            <label>Show FacePile?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Show Profile photos when friends like.</comment>
+                            <depends>
+                                <facebookenable>1</facebookenable>
+                            </depends>
+                        </facepile>
+                        <showpost>
+                            <label>Show Posts?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Show Posts from page's timeline.</comment>
+                            <depends>
+                                <facebookenable>1</facebookenable>
+                            </depends>
+                        </showpost>
+                        <hidecta>
+                            <label>Hide CTA Button?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Hide custom call to action utton(if available).</comment>
+                            <depends>
+                                <facebookenable>1</facebookenable>
+                            </depends>
+                        </hidecta>
+                        <smallheader>
+                            <label>Use Small Header?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>91</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Use small header instead.</comment>
+                            <depends>
+                                <facebookenable>1</facebookenable>
+                            </depends>
+                        </smallheader>
+                        <adaptcontainer>
+                            <label>Adapt Container Width?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>96</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Try to fit inside container width.</comment>
+                            <depends>
+                                <facebookenable>1</facebookenable>
+                            </depends>
+                        </adaptcontainer>
+                    </fields>
+                </facebook>
+                <twitter translate="label"> 
+                    <label>Twitter Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment>To call in .phtml file 
+                        echo $this->getLayout()->createBlock('core/template')->setTemplate('social/twitter.phtml')->toHtml()
+                    </comment>
+                    <fields>
+                        <twitterenable translate="label">
+                            <label>Enable Twiiter</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </twitterenable>
+                        <twitter_account translate="label">
+                            <label>Twitter Account</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <twitterenable>1</twitterenable>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </twitter_account>
+                        <includejs translate="label">
+                            <label>Include jQuery library? </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <twitterenable>1</twitterenable>
+                            </depends>
+                        </includejs>
+                        <twitterleft translate="label">
+                            <label>Display in Left sidebar? </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <twitterenable>1</twitterenable>
+                            </depends>
+                        </twitterleft>
+                        <twitterright translate="label">
+                            <label>Display in Right sidebar? </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>23</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <twitterenable>1</twitterenable>
+                            </depends>
+                        </twitterright>
+                        <consumer_key translate="label">
+                            <label>Twitter consumer key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <twitterenable>1</twitterenable>
+                            </depends>
+                        </consumer_key>
+                        <secret_key translate="label">
+                            <label>Twitter consumer secret</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <twitterenable>1</twitterenable>
+                            </depends>
+                        </secret_key>
+                        <access_token translate="label">
+                            <label>Twitter access token</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <twitterenable>1</twitterenable>
+                            </depends>
+                        </access_token>
+                        <access_token_secret translate="label">
+                            <label>Twitter access token secret</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <twitterenable>1</twitterenable>
+                            </depends>
+                        </access_token_secret>
+                        <no_of_tweets translate="label">
+                            <label>Number of tweets shown</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <twitterenable>1</twitterenable>
+                            </depends>
+                        </no_of_tweets>
+                    </fields>
+                </twitter>
+            </groups>
+        </socialsettings>
+    </sections>
+</config>

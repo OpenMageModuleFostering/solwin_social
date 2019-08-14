@@ -1,0 +1,13 @@
+.tweet-icon {
+    background: rgba(0, 0, 0, 0) url("../images/social_twitter_icon.png") no-repeat scroll 0 0;
+    height: 32px;
+    width:32px;
+    float: left;
+}
+.twitterList p {
+    padding-left: 35px;
+}
+.twitterList li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
